@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hover2</title>
+	<style type="text/css">
+		div {
+			width: 300px;
+			height: 450px;
+			border: 1px solid #aaa;
+			text-align: center;
+			background-color: #eee;
+		}
+		div#wrapper {
+			position: absolute;
+			top: 80px;
+			left: 20px;
+			width: 1200px;
+			height: 1350px;
+		}
+		div#th1 {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background: url("Images2/d1.jpg") no-repeat center;
+		}
+		div#th2 {
+			position: absolute;
+			top: 0px;
+			left: 300px;
+			background: url("Images2/d2.jpg") no-repeat center;
+		}
+		div#th3 {
+			position: absolute;
+			top: 0px;
+			left: 600px;
+			background: url("Images2/d3.jpg") no-repeat center;
+		}
+		div#th4 {
+			position: absolute;
+			top: 0px;
+			left: 900px;
+			background: url("Images2/w1.jpg") no-repeat center;
+		}
+		div#th5 {
+			position: absolute;
+			top: 450px;
+			left: 0px;
+			background: url("Images2/d4.jpg") no-repeat center;
+		}
+		div#th6 {
+			position: absolute;
+			top: 450px;
+			left: 300px;
+			background: url("Images2/d5.jpg") no-repeat center;
+		}
+		div#th7 {
+			position: absolute;
+			top: 450px;
+			left: 600px;
+			background: url("Images2/w2.jpg") no-repeat center;
+		}
+		div#th8 {
+			position: absolute;
+			top: 450px;
+			left: 900px;
+			background: url("Images2/d6.jpg") no-repeat center;
+		}
+		div#th9 {
+			position: absolute;
+			top: 900px;
+			left: 0px;
+			background: url("Images2/d7.jpg") no-repeat center;
+		}
+		div#th10 {
+			position: absolute;
+			top: 900px;
+			left: 300px;
+			background: url("Images2/w3.jpg") no-repeat center;
+		}
+		div#th11 {
+			position: absolute;
+			top: 900px;
+			left: 600px;
+			background: url("Images2/w4.jpg") no-repeat center;
+		}
+		div#th12 {
+			position: absolute;
+			top: 900px;
+			left: 900px;
+			background: url("Images2/d8.jpg") no-repeat center;
+		}
+	</style>
+	<p><a href="hover.html">Go to Part 1</a></p>
+	<h3> Click to make the wild life animals disappear</h3>
+</head>
+
+<body>
+	
+	<div id="wrapper">
+		<div id="th1"></div>
+		<div id="th2"></div>
+		<div id="th3"></div>
+		<div id="th4"></div>
+		<div id="th5"></div>
+		<div id="th6"></div>
+		<div id="th7"></div>
+		<div id="th8"></div>
+		<div id="th9"></div>
+		<div id="th10"></div>
+		<div id="th11"></div>
+		<div id="th12"></div>
+	</div>
+	
+	<script text="text/javascript" src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//round corners 
+			$("div").css("border-radius", "10px");
+			
+			$("div[id!='wrapper']").animate({"opacity" : .6}).hover(function(){
+				//runs if the mouse hovers over the img
+				//mouseover
+				$(this).animate({"opacity" : 1});
+			}, function(){
+				//runs if the mouse is NOT OVER the img
+				//mouseOUT
+				$(this).animate({"opacity" : .6});
+			}).click(function(){
+				$("#th4").css("display","none");
+				$("#th7").css("display","none");
+				$("#th10").css("display","none");
+				//window.location.href= "http://www.purdue.edu";
+			});
+			
+		});//end document ready
+	</script>
+</body>
+</html>

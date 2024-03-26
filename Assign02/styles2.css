@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Modified CSS Document */
+html, body, hl, form, fieldset, legend, ol, li {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f2f2f2; /* Changed background color */
+	color: #333333; /* Changed text color */
+	font-family: Arial, sans-serif; /* Changed font stack */
+	padding: 10px; /* Reduced padding */
+	font-size: 20px; /* Reduced font size */
+	margin-bottom: 10px; /* Reduced margin */
+}
+
+h1 {
+	font-size: 24px; /* Reduced font size */
+	margin-bottom: 15px; /* Increased margin */
+}
+
+form#payment {
+	background: #ffcc00; /* Changed background color */
+	border-radius: 10px; /* Simplified border-radius */
+	padding: 30px; /* Increased padding */
+	width: 80%; /* Adjusted width */
+	margin: 0 auto; /* Centered the form horizontally */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added a box shadow */
+}
+
+form#payment fieldset {
+	border: none;
+	margin-bottom: 20px; /* Increased margin */
+}
+
+form#payment fieldset:last-of-type {
+	margin-bottom: 0;
+}
+
+form#payment legend {
+	color: #555555; /* Changed legend text color */
+	font-size: 18px; /* Reduced font size */
+	font-weight: bold;
+	padding-bottom: 15px; /* Increased padding */
+	text-shadow: none; /* Removed text shadow */
+}
+
+span#progress {
+	color: #555555; /* Changed text color */
+	font-size: 16px; /* Reduced font size */
+	padding-bottom: 15px; /* Increased padding */
+}
+
+form#payment > fieldset > legend:before {
+	content: "Step " counter(fieldsets) ": ";
+	counter-increment: fieldsets;
+}
+
+form#payment fieldset fieldset legend {
+	color: #333333; /* Changed legend text color */
+	font-size: 16px; /* Reduced font size */
+	font-weight: normal;
+	padding-bottom: 0;
+}
+
+form#payment ol li {
+	background: #66cc66; /* Changed list item background color */
+	border-color: #339933; /* Changed border color */
+	border-width: 1px; /* Adjusted border width */
+	border-radius: 5px; /* Adjusted border radius */
+	line-height: 24px; /* Adjusted line height */
+	list-style: none;
+	padding: 10px; /* Increased padding */
+	margin-bottom: 10px; /* Increased margin */
+}
+
+form#payment ol ol li {
+	background: #ffffff; /* Changed nested list item background color */
+	border: 1px solid #cccccc; /* Changed border style */
+	float: none; /* Removed float */
+}
+
+form#payment label {
+	float: none; /* Removed float */
+	font-size: 16px; /* Adjusted font size */
+	width: auto;
+	display: block; /* Changed to block-level display */
+	margin-bottom: 5px; /* Increased margin */
+}
+
+form#payment fieldset fieldset label {
+	background: none; /* Removed background image */
+	line-height: 20px;
+	padding: 0 0 15px; /* Increased padding */
+	width: auto;
+	display: block; /* Changed to block-level display */
+}
+
+form#payment fieldset fieldset label:hover {
+	cursor: pointer;
+}
+
+form#payment input:not([type=radio]),
+form#payment textarea {
+	background: #ffffff;
+	border: 1px solid #cccccc; /* Added border */
+	border-radius: 3px;
+	font: 16px Arial, sans-serif; /* Changed font stack */
+	outline: none;
+	padding: 8px; /* Increased padding */
+	width: 100%; /* Full-width input fields */
+}
+
+form#payment input:not([type=submit]):focus,
+form#payment textarea:focus {
+	background: #f0f0f0; /* Adjusted focus background color */
+}
+
+form#payment input[type=radio] {
+	margin-right: 8px; /* Adjusted margin */
+}
+
+form#payment button {
+	background: #ff6600; /* Changed button background color */
+	border: none;
+	border-radius: 10px;
+	color: #ffffff;
+	display: inline-block; /* Changed to inline-block */
+	font: 18px Arial, sans-serif; /* Changed font stack */
+	letter-spacing: 1px;
+	padding: 10px 25px; /* Increased padding */
+	text-shadow: none; /* Removed text shadow */
+	text-transform: uppercase;
+	margin: 10px 0; /* Adjusted margin */
+}
+
+form#payment button:hover {
+	background: #ff3300; /* Changed button hover color */
+	cursor: pointer;
+}
+
+
